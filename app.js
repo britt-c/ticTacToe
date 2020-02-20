@@ -1,11 +1,10 @@
 window.onload = function() {
 	const allBoxes = document.querySelectorAll("button.btn")
-
-	allBoxes.forEach(function(boxes){
-		boxes.addEventListener("click", function(event){
-			let box = event.currentTarget
-			console.log(box)
+			allBoxes.forEach(function(boxes){
+			boxes.addEventListener("click", function(event){
+				let box = event.currentTarget
+				console.log(box)
+				box.innerText = "x"
+			})
 		})
-	})
-	 
-}
+	}
