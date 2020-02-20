@@ -1,8 +1,8 @@
 window.onload = function() {
 	const allBoxes = document.querySelectorAll("button.btn")
-	const restart = document.
 	document.getElementById("output").addEventListener("mouseover", easterEgg)
 	document.getElementById("output").addEventListener("mouseout", displayHeader)
+	document.getElementById("restart").addEventListener("click", restart)
 	
 	allBoxes.forEach(function(boxes){
 		boxes.addEventListener("click", onClick)
@@ -39,8 +39,11 @@ function easterEgg(){
 	output.innerText = egg
 }
 
-function reset(){
-		
+function restart(){
+	allBoxes.forEach(function(boxes){
+		boxes.innerText = ""
+		boxes.style = "none"
+	})
 }
 
 }
